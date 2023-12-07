@@ -8,37 +8,39 @@ public class TesteMatrizAdjacencia
 		grafo1.inserirAresta(0, 1);
 		grafo1.inserirAresta(1, 2);
 		grafo1.inserirAresta(2, 0);
-		//grafo1.mostrarMatrizAdjacencia();
-//System.out.println("=============");
+		System.out.println("Grafo 1");
+		grafo1.info();
+
 		MatrizAdjacencia grafo2 = new MatrizAdjacencia(3, false, true);
 		grafo2.inserirAresta(0, 1);
 		grafo2.inserirAresta(1, 2);
 		grafo2.inserirAresta(2, 0);
-//		grafo2.mostrarMatrizAdjacencia();
-//System.out.println("=============");
-	MatrizAdjacencia grafo3 = new MatrizAdjacencia(3, true, false);
-	grafo3.inserirAresta(0, 1, 5);
-	grafo3.inserirAresta(1, 2, 4);
-	grafo3.inserirAresta(2, 0, 3);
-	//grafo3.mostrarMatrizAdjacencia();
-	
-	//System.out.println(grafo3.saoAdjacentes(0, 0));
-	
-	//MatrizAdjacencia(int numVertices, boolean ponderado, boolean direcionado)
-	MatrizAdjacencia grafo4 = new MatrizAdjacencia(4, true, false);
-	grafo4.inserirAresta(0, 1, 1);
-	grafo4.inserirAresta(1, 2, 2);
-	grafo4.inserirAresta(2, 0, 3);
-	grafo4.inserirAresta(0, 3, 4);
-	grafo4.info();
-	
-	grafo4.inserirAresta(2, 3, 4);
-	grafo4.info();
+		System.out.println("Grafo 2");
+		grafo2.info();
+		
 
-	grafo4.imprimirDijkstra(0);
-	grafo4.imprimirDijkstra(1);
-	grafo4.imprimirDijkstra(2);
-	grafo4.imprimirDijkstra(3);
+		MatrizAdjacencia grafo3 = new MatrizAdjacencia(3, true, false);
+		grafo3.inserirAresta(0, 1, 5);
+		grafo3.inserirAresta(1, 2, 4);
+		grafo3.inserirAresta(2, 0, 3);
+		System.out.println("Grafo 3");
+		grafo3.info();
+	
+		MatrizAdjacencia grafo4 = new MatrizAdjacencia(4, true, false);
+		grafo4.inserirAresta(0, 1, 1);
+		grafo4.inserirAresta(1, 2, 2);
+		grafo4.inserirAresta(2, 0, 3);
+		grafo4.inserirAresta(0, 3, 4);
+		System.out.println("Grafo 4");
+		grafo4.info();
+	
+		grafo4.inserirAresta(2, 3, 4);
+		grafo4.info();
+
+		grafo4.imprimirDijkstra(0);
+		grafo4.imprimirDijkstra(1);
+		grafo4.imprimirDijkstra(2);
+		grafo4.imprimirDijkstra(3);
 	
 	System.out.println("==========\nGrafo do exercício 2, letra a:");
 	MatrizAdjacencia grafo5 = new MatrizAdjacencia(5, true, false);
@@ -53,6 +55,10 @@ public class TesteMatrizAdjacencia
 	grafo5.info();
 	grafo5.imprimirDijkstra(0);
 	
+	grafo5.mostrarMatrizAdjacencia();
+	grafo5.removerVertice(1);
+	System.out.println("-");
+	grafo5.mostrarMatrizAdjacencia();
 	
 	
 }}

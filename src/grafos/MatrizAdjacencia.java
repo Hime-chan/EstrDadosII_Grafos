@@ -68,10 +68,15 @@ public class MatrizAdjacencia {
 	
 //Exercício 1: Remover um vértice	
 	public void removerVertice(int vertice)
-		{for (int i=0; i<numVertices;i++)
-			{apagarAresta(vertice, i);
-			apagarAresta(i, vertice);}
-		 }
+		{for (int i=0;i<numVertices-1;i++)
+			{for (int j=vertice;j<numVertices-1;j++)
+	 	 		{G[i][j]=G[i][j+1];}}
+		
+		 for (int i=vertice;i<numVertices-1;i++)
+		 	{G[i]=G[i+1];
+		 	 for (int j=vertice;j<numVertices-1;j++)
+		 	 	{G[i][j]=G[i][j+1];}}
+		 numVertices-=1;}
 
 //Exercício 2: Verificar se um grafo é conexo
 	public boolean isConexo()
